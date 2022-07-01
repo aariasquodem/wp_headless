@@ -6,7 +6,7 @@ import ArticleCard from '../ArticleCard';
 const Articles = () => {
 
   const [articles, setarticles] = useState([]);
-  const [currentPage, setCurrentPage] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const fetchArticles = async() => {
