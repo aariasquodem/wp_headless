@@ -1,7 +1,11 @@
 import React from "react";
+import Nav from '../Nav';
 
 const Header = () => {
-  return <div>Header</div>;
+  return <header>
+          <h1>React WPHeadles</h1>
+          <Nav/>
+        </header>;
 };
 
 export default Header;
