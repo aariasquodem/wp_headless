@@ -35,6 +35,15 @@ const ArticleDetail = () => {
 
   const paintCards = () => data.comments.map((comment, i) => <CommentCard comment={comment} key={i}/>);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = e.target.elements.email.value;
+    const body = e.target.elements.body.value;
+    const comment = {'email': email, 'body': body}
+    console.log(comment)
+    console.log(data.comments);
+  }
+
   return <>
           {loading
           ? <CircleLoader speedMultiplier={0.5}/>
@@ -44,7 +53,15 @@ const ArticleDetail = () => {
             <p>{data.company}</p>
             <p>{data.city}</p>
             <p>{data.body}</p>
+            <h3>Comments:</h3>
             <div>{paintCards()}</div>
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="email">Email:</label>
+              <input type="email" name="email"/>
+              <label htmlFor="body">Comment</label>
+              <input type="text" name="body"/>
+              <input type="submit" value="Send"/>
+            </form>
           </div>
           }
         </>;
