@@ -22,7 +22,6 @@ const article = async(id) => {
       'id': articleJson.id,
       'comments': commentsJson
     }
-    console.log(dataArticle);
     return dataArticle
   } catch (error) {
     console.log('error', error)
