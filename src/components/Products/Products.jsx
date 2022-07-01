@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
+import {CircleLoader} from 'react-spinners';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
 import ProductCard from '../ProductCard';
 
 const Products = () => {
@@ -29,9 +29,14 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const paintCards = () => products.map((product, i) => <Link to={`/productdetail/?id=${product.id}`} key={i}><ProductCard product={product} /></Link>);
+  const paintCards = () => products.map((product, i) =><ProductCard product={product} key={i} />);
 
-  return <div>{paintCards()}</div>;
+  return <div>
+          {products.length === 0
+          ? <CircleLoader speedMultiplier={0.5}/>
+          : <div>{paintCards()}</div>
+          }
+        </div>;
 };
 
 export default Products;

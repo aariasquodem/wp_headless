@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios';
 import { useSearchParams } from "react-router-dom";
 import { useDataLoader } from 'react-use-data-loader';
+import {CircleLoader} from 'react-spinners';
 
 const products = async(id) => {
   try {
@@ -24,7 +25,7 @@ const ProductDetail = () => {
 
   return <>
           {loading
-          ? <h2>loading...</h2>
+          ? <CircleLoader speedMultiplier={0.5}/>
           : <div>
             <h2>{data.title}</h2>
             <p>{data.description}</p>
