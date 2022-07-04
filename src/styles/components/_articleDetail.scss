@@ -1,0 +1,55 @@
+@import '../utils/variables.scss';
+
+.article-body,
+.article-comments{
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
+    padding: 0.75rem;
+    width: 80%;
+    background-color: $item-bg;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+}
+
+.article-body h2,
+.article-comments h3{
+    color: $primary;
+}
+
+.article-comments{
+    text-align: start;
+}
+
+.comments{
+    padding-bottom: 0.75rem;
+}
+
+.body-comment{
+    display: flex;
+    flex-direction: column;
+}
+
+.send-comment{
+    color: $secondary;
+    background-color: $primary;
+    border: none;
+    cursor: pointer;
+}
+
+.send-comment:hover{
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.email-comment input:focus{
+    outline: none !important;
+    border:1px solid $primary;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+textarea:focus{
+    outline: none !important;
+    border:1px solid $primary;
+    box-shadow: 0 0 10px #719ECE;
+}

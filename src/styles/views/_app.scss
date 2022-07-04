@@ -1,3 +1,26 @@
+@import '../utils/variables.scss';
+
+*{
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: #e2eef5;
+    color: $txt-color;
+}
+
+.title{
+    margin-top: 1rem;
+}
+
+.spinner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .App {
     text-align: center;
 }

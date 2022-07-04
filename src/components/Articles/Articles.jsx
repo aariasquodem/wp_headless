@@ -50,16 +50,17 @@ const Articles = () => {
   }
 
   return <div>
+          <h2 className="title">Articles</h2>
           {articles.length === 0
-          ? <CircleLoader speedMultiplier={0.5}/>
-          : <div>
-              {paintCards()}
-              <div className="pagination">
-                <button onClick={prevPage} className='pagination__button'>Prev</button>
-                <p className="current">{currentPage}</p>
-                <button onClick={nextPage} className='pagination__button'>Next</button>
-              </div>
+          ? <div className="spinner"><CircleLoader speedMultiplier={0.5} color={'#00857a'}  size={100}/></div>
+          : <>
+            <div className="articles-container">{paintCards()}</div>
+            <div className="pagination">
+              <button onClick={prevPage} className='pagination__button'>&#171;</button>
+              <p className="current">{currentPage}</p>
+              <button onClick={nextPage} className='pagination__button'>&#187;</button>
             </div>
+            </>
           }
         </div>;
 };

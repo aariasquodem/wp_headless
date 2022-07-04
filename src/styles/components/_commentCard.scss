@@ -1,0 +1,11 @@
+@import '../utils/variables.scss';
+
+.comment{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $primary;
+}
+
+.author{
+    margin-bottom: 0.5rem;
+}

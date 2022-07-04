@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get('https://fakestoreapi.com/products?limit=5');
+        const res = await axios.get('https://fakestoreapi.com/products?limit=4');
         const json = res.data;
         const productsArray = json.map(element => {
           return {
@@ -32,9 +32,10 @@ const Products = () => {
   const paintCards = () => products.map((product, i) =><ProductCard product={product} key={i} />);
 
   return <div>
+          <h2 className="title">Products</h2>
           {products.length === 0
-          ? <CircleLoader speedMultiplier={0.5}/>
-          : <div>{paintCards()}</div>
+          ? <div className="spinner"><CircleLoader speedMultiplier={0.5} color={'#00857a'}  size={100}/></div>
+          : <div className="product-list">{paintCards()}</div>
           }
         </div>;
 };

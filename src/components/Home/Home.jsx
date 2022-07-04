@@ -30,10 +30,10 @@ const Home = () => {
   const paintCards = () => articles.map((article, i) => <ArticleCard article={article} key={i}/>);
 
   return <div>
-    <h1>Last articles</h1>
+    <h2 className="title">Last articles</h2>
           {articles.length === 0
-          ? <CircleLoader speedMultiplier={0.5}/>
-          : <div>{paintCards()}</div>
+          ? <div className="spinner"><CircleLoader speedMultiplier={0.5} color={'#00857a'}  size={100}/></div>
+          : <div className="card-container">{paintCards()}</div>
           }
         </div>;
 };

@@ -4,9 +4,9 @@ const CommentCard = ({comment}) => {
 
   const {body, email} = comment
 
-  return <div>
-          <h4>Author: {email}</h4>
-          <p>Comment: {body}</p>
+  return <div className="comment">
+          <p><b>Comment:</b> {body}</p>
+          <p className="author"><b>Author:</b> {email}</p>
         </div>;
 };
 

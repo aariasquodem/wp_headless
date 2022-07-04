@@ -25,11 +25,11 @@ const ProductDetail = () => {
 
   return <>
           {loading
-          ? <CircleLoader speedMultiplier={0.5}/>
+          ? <div className="spinner"><CircleLoader speedMultiplier={0.5} color={'#00857a'}  size={100}/></div>
           : <div>
             <h2>{data.title}</h2>
             <p>{data.description}</p>
-            <p>{data.price}</p>
+            <p><b>Price: </b>{data.price}$</p>
             <img src={data.img} alt={data.title} />
           </div>
           }
