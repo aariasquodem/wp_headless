@@ -1,16 +1,9 @@
 @import '../utils/variables.scss';
+@import '../utils/mixins.scss';
 
 .article-body,
 .article-comments{
-    margin-top: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2.5rem;
-    padding: 0.75rem;
-    width: 80%;
-    background-color: $item-bg;
-    border-radius: 5px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    @include card;
 }
 
 .article-body h2,
@@ -23,7 +16,7 @@
 }
 
 .comments{
-    padding-bottom: 0.75rem;
+    padding-bottom: $sml;
 }
 
 .body-comment{
@@ -39,17 +32,17 @@
 }
 
 .send-comment:hover{
-    box-shadow: 0 0 10px #719ECE;
+    box-shadow: $light-shadow;
 }
 
 .email-comment input:focus{
     outline: none !important;
     border:1px solid $primary;
-    box-shadow: 0 0 10px #719ECE;
+    box-shadow: $light-shadow;
 }
 
 textarea:focus{
     outline: none !important;
     border:1px solid $primary;
-    box-shadow: 0 0 10px #719ECE;
+    box-shadow: $light-shadow;
 }

@@ -64,13 +64,13 @@ content: '';
     padding: 5rem 0;
     list-style: none;
     background-color: $primary;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    box-shadow: $shadow-card;
     transition-duration: .25s;
 }
 
 .menu__item {
     display: block;
-    padding: 0.75rem 1.5rem;
+    padding: $sml 1.5rem;
     color: $title-color;
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;

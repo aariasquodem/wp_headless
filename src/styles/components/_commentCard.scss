@@ -1,8 +1,8 @@
 @import '../utils/variables.scss';
 
 .comment{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: $med;
+    margin-bottom: $med;
     border-bottom: 1px solid $primary;
 }
 
