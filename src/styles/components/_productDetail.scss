@@ -1,0 +1,25 @@
+@import '../utils/variables.scss';
+
+.product-page{
+    padding-bottom: 2rem;
+}
+
+.product-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.75rem;
+    width: 80%;
+    background-color: $item-bg;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+}
+
+.product-detail img{
+    width: 20%;
+    border-radius: 5px;
+}
